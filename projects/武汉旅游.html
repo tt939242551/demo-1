@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2019 by tt939242551 (http://jsbin.com/nomosex/5/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <link rel="stylesheet" href="https://at.alicdn.com/t/font_1183922_qsledqfu6t.css">
+  <style>
+    * { 
+      margin: 0;
+      padding: 0;
+      box-sizing: content-box;}
+    a {
+      text-decoration: none;
+      padding: 10px 15px; 
+    }
+    p {
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    }
+    h2+p {
+    font-size: 16px;
+    font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    .clearfix::after {
+     content:'';
+     display: block;
+     clear: both;
+    }
+    ul {
+      list-style: none;
+    }
+    nav>ul a {
+    color: #fff;
+    float: right;
+    line-height: 20px;
+    }
+    nav>a {
+    display: inline-block;  
+    float: left;
+    font-size: 20px;
+    }
+    html,body {
+    height:100%;
+    }
+    header {
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/TheYellowCraneTower.jpg/800px-TheYellowCraneTower.jpg);
+    height: 100%;
+    background-size: cover;
+    background-repeat: none;
+    }
+    #scenic,#team {
+    background: #eee;  
+    }
+    header .welcome {
+    text-align: center;
+    color: #fff;  
+    font-size: 20px;
+    line-height: 70px;
+    margin-top: 100px;
+    }
+    .welcome a {
+    color: #fff;
+    display: inline-block;
+    padding: 0 30px;
+    margin-top: 20px;
+    background: #fed136;
+    opacity: 0.6;
+    border-radius: 4px;
+    }
+    nav a:hover {
+    color: #fed136;
+    }
+    .welcome a:hover {
+    opacity: 1; 
+    }
+    section {
+    text-align: center;
+    padding: 120px 20px;
+    }
+    section>h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    }
+    section>ul>li {
+    line-height: 25px;
+    padding: 0 20px;
+    width: calc(33.33% - 40px);
+    float: left;
+    margin-top: 100px;
+
+    }
+    section>ul .iconfont {
+    font-size: 100px;
+
+    }
+    section>ul h3 {
+    font-size: 20px ;
+    padding: 15px 0;  
+    }
+    section>ul .scenic-img {
+    padding: 0;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 250px;
+    }
+    .scenic-img >div {
+     background: rgba(254, 209, 54, .8); 
+     height: 100%;
+     width: 100%; 
+     position: absolute;
+     display: none;
+    }
+    .symbol {
+    font-size: 80px;
+    color: #fff;
+    padding-top: 105px;
+    }
+    .scenic-img>img {
+     width: 100%;
+     height: 250px;
+    }
+    .scenic-img:hover div{
+    display: block
+    }
+    .scenic {
+     padding-bottom: 900px;  
+    }
+    .timer-shaft {
+     padding-top: 100px;
+    }
+    .timer-shaft img {
+    position: relative;
+    z-index: 100;  
+    }
+    .right img {
+    float: right;
+    margin-right: calc(50% - 87px);
+    width: 160px;
+    height: 160px;
+    border-radius: 100%;
+    border: 7px solid #f1f1f1;
+    }
+    .left img {
+    float: left;
+    margin-left: calc(50% - 87px);
+    width: 160px;
+    height: 160px;
+    border-radius: 100%;
+    border: 7px solid #f1f1f1;    
+    }
+    .timer-shaft h3 {
+    padding-bottom: 10px;
+    }
+    .timer-shaft>div {
+    margin-bottom: 100px;  
+    }
+    .left div {
+    padding-top: 10px;
+    text-align: left;
+    }
+    .right div {
+    padding-top: 10px;
+    text-align: right;
+    }
+    .tag {
+    display: inline-block;
+    background: #fed136;
+    color: #fff;
+    padding-top: 60px;
+    width: 160px;
+    height: 100px;
+    border-radius: 100%;
+    border: 7px solid #f1f1f1;
+    position: relative;
+    z-index: 99;
+    }
+    .time {
+    position: relative;  
+    }
+    .time::before {
+    content:'';
+    display: block;
+    width: 4px;
+    height: 140px;
+    background: #f1f1f1;
+    position: absolute; 
+    left: 50%;
+    top: 170px;
+    z-index: 1;
+    }
+    .team img {
+     width: 80%;
+     border-radius: 100%;
+    }
+    .team a {
+    display: inline-block;
+    width: 20px;
+    height: 26px;
+    background: #000;
+    border-radius: 100%;
+    margin: 20px 5px 50px 5px ;
+    }
+    .team>li>a {
+    font-size: 25px;
+    padding-left: 10px; 
+    color: #fff;
+    }
+    .iconfont:hover {
+    background: #fed136;  
+    }
+    @font-face {
+  font-family: 'iconfont';  /* project id 1183922 */
+  src: url('//at.alicdn.com/t/font_1183922_qsledqfu6t.eot');
+  src: url('//at.alicdn.com/t/font_1183922_qsledqfu6t.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1183922_qsledqfu6t.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1183922_qsledqfu6t.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1183922_qsledqfu6t.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1183922_qsledqfu6t.svg#iconfont') format('svg');
+    }
+    .iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;}
+   .logo>a>img {
+    width: 200px;
+    height: 50px;
+    padding: 40px 30px;
+    }
+   .logo {
+  
+    text-align: center;
+    background: #fff; 
+    }
+    #contact {  
+    background-image: url(https://www.crazyvector.com/wp-content/uploads/2018/11/Pixel-World-Globe-Map-Vector.jpg);
+    height: 100%;
+    background-size: cover;
+    background-repeat: none;
+    }
+    #contact>ul,#contact>div {
+     width: calc(50% - 100px);  
+    }
+    #contact>ul>li {
+    margin: 0 0 20px 20px;
+    width: 100%;  
+    }
+    #contact input,#contact textarea {
+    display: inline-block;
+    width: 100%; 
+    }
+    #contact input {
+    padding: 20px 20px;
+    border-radius: 6px;
+    }
+    #contact>div {
+    float: right; 
+    margin: -160px 80px 0 0;
+    }
+    #contact textarea {
+    height: 180px; 
+    padding: 20px 20px;
+    border-radius: 6px;
+    }
+    #contact>P {
+    margin-bottom: 60px;  
+    }
+    #contact>P,#contact>h2 {
+    color: #fff;
+    }
+    #contact>a {
+    color: #fff;
+    display: inline-block;
+    padding: 20px 30px;
+    background: #fed136;
+    opacity: 0.8;
+    position: relative;
+    top:300px;
+    border-radius: 4px;
+    }
+    #contact>a:hover {
+    opacity: 1;
+    } 
+    .last-nav>a {
+    display: inline-block;
+    width: 20px;
+    height: 26px;
+    background: #000;
+    border-radius: 100%;
+    margin: 20px 5px 0 5px ;
+    font-size: 25px;
+    padding-left: 10px; 
+    color: #fff;
+    }
+    .last-nav {
+    text-align: center;
+    }
+    .iconfont:hover {
+    background: #fed136;  
+    }
+    .last-nav>p {
+    float: left; 
+    padding: 30px 100px;
+    }
+    .last-nav>span {
+    float: right;
+    padding: 30px 100px;
+    }
+    .footer {
+     color:#fed136;
+     padding:0;
+    }
+    .footer:hover {
+    text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="clearfix">
+      <a href="">DADA TRAVEL</a>
+      <ul>
+        <li><a href="#contact">CONTACT</a></li>
+        <li><a href="#team">TEAM</a></li>
+        <li><a href="#history">HISTORY</a></li>
+        <li><a href="#scenic">SCENIC</a></li>
+        <li><a href="#services">SERVICES</a></li>
+      </ul>
+    </nav>
+    <div class="welcome">
+      <h2>Welcome to wuhan, hubei</h2>
+      <h1>IT WILL BE A WONDERFUL JOURNEY</h1>
+      <a href="#services">TELL ME MORE</a>
+    </div>
+  </header>
+  <main>
+    <section id="services">
+      <h2>SERVICES</h2>
+      <P>Lorem ipsum dolor sit amet consectetur.</P>
+      <ul class="clearfix">
+        <li>
+          <span class="iconfont">&#xeb55</span>
+          <h3>Scenic Area</h3>
+          <p>武汉是历史悠久的文化名城，地表形态复杂，形成了许多自然人文景观。武汉现有黄鹤楼公园、武汉市东湖风景区、木兰天池共三个国家5A级旅游景区，以及归元禅寺、辛亥革命武昌起义纪念馆（红楼）、
+            中国科学院武汉植物园、武汉博物馆、中国地质大学逸夫博物馆等18处国家4A级旅游景区。</p>
+        </li>
+        <li>
+          <span class="iconfont">&#xe60c</span>
+          <h3>Cate</h3>
+          <p>武汉有“早尝户部巷，夜吃吉庆街”之说。武汉四大名早点，依次是蔡林记的热干面、五芳斋的汤圆、四季美的汤包、老通城的豆皮。其他的特色小吃有面窝、烧梅、糊汤粉、欢喜坨、糯米鸡、油香、桂花糊、酥饺以及，水饺（武汉混沌）、三鲜粉丝、猪肝煲，牛肉粉面，牛杂粉面，凉面、蒸饺、包子，等等。</p> 
+        </li>
+        <li>
+          <span class="iconfont">&#xe65b</span>
+          <h3>Shopping</h3>
+          <p>光谷步行街上，集中了大量的百货公司、餐饮娱乐场所，是武汉的一个时尚区域，也是当地时尚达人扎堆逛街的地方.步行街从西到东分别是美式、西班牙、北欧和英伦四大建筑群，展现了不同的异域风情。还有楚河汉街,有着浓郁的艺术氛围，也是个一站式吃喝玩乐完美结合的商业热点。</p>
+        </li>
+      </ul>
+    </section>
+    <section id="scenic">
+      <h2>SCENIC</h2>
+      <p>Lorem ipsum dolor sit amet consectetur.</p>
+      <ul class="scenic">
+        <li>
+          <a class="scenic-img" href="">
+            <div>
+              <h1 class="symbol">+</h1>
+            </div>
+            <img src="http://h.bytravel.cn/www/0/head/340.gif" alt="">
+          </a>
+          <h3>HuangHe Tower</h3>
+          <p>One of the three famous buildings in jiangnan</p>
+        </li>
+        <li>
+          <a class="scenic-img" href="">
+            <div>
+              <h1 class="symbol">+</h1>
+            </div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/East_Lake_Wuhan.JPG" alt="">
+          </a> 
+          <h3>East Lake</h3>
+          <p>The first batch of national key scenic spots</p>
+        </li>
+        <li>
+          <a class="scenic-img" href="">
+            <div>
+              <h1 class="symbol">+</h1>
+            </div>
+            <img src="http://www-images.oss-cn-shenzhen.aliyuncs.com/upload/thumbs/2016_09_21/20160921174501_74061.jpg" alt="">
+          </a>
+          <h3>Mulan Great Lake</h3>
+          <p>Cultural and ecological tourism area</p>
+        </li>
+        <li>
+          <a class="scenic-img" href="">
+            <div>
+              <h1 class="symbol">+</h1>
+            </div>
+            <img src="https://www.mishinan.cn/uploads/allimg/190423/09350I648-1.png" alt="">
+          </a>
+          <h3>Yangtze River Bridge</h3>
+          <p>The first bridge over the Yangtze river</p>
+        </li>
+        <li>
+          <a class="scenic-img" href="">
+            <div>
+              <h1 class="symbol">+</h1>
+            </div>
+            <img src="http://h.bytravel.cn/www/5/head/5218.gif" alt="">
+          </a>
+          <h3>Guiyuan Buddhist Temple</h3>
+          <p>Perfect architecture, wonderful sculpture, rich collection</p>
+        </li>
+        <li>
+          <a class="scenic-img" href="">
+            <div>
+              <h1 class="symbol">+</h1>
+            </div>
+            <img src="https://dimg02.c-ctrip.com/images/100r11000000r6woc9D41_R_1600_10000_Mtg_7.jpg" alt="">
+          </a>
+          <h3>Wuhan University</h3>
+          <p>The cherry blossom is well known</p>
+        </li>
+      </ul>
+    </section>
+    <section id="history">
+      <h2>HISTORY</h2>
+      <p>Lorem ipsum dolor sit amet consectetur</p>
+      <div class="timer-shaft">
+        <div class="right time">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Wuchangqiyi_paobing.JPG/300px-Wuchangqiyi_paobing.JPG" alt="">
+          <div>
+            <h3>OCTOBER 10, 1911</h3>
+            <h3>Xinhai Revolution broke out</h3>
+            <p>公元1911年（农历辛亥年八月十九）夜辛亥革命武昌起义爆发，辛亥革命成功推翻清朝统治，结束始自2000年前秦朝时期的帝制，开启民主共和新纪元，传播了民主共和观念，对此后中国宪政与法治发展、中央与地方政治关系、国内各民族间关系等有重要的影响。</p>
+          </div>  
+        </div>
+        <div class="left time">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Chiang_Kai-shek%2C_Li_Zongren_and_XGOA_microphone_19480520.jpg/375px-Chiang_Kai-shek%2C_Li_Zongren_and_XGOA_microphone_19480520.jpg" alt="">
+          <div>
+            <h3>JANUARY 1, 1927</h3>
+            <h3>The provisional capital of the republic of China</h3>
+            <p>民国十六年，国民党中央临时联席会议宣布，国民政府在汉口开始办公。武昌、汉口、汉阳三镇合为京兆区，定名“武汉”，作为中华民国临时首都，三镇首次统一行政建制。民国十八年（1929年）武汉分治，武昌、汉阳县城划出，汉口为省辖市，民国二十一年（1932年）改为特别市。</p>
+          </div>  
+        </div>
+        <div class="right time">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzD8dkS4DCk49YgH8BzRf2TkwNeqK4CxFGr8ckadVtA4xfL200eQ" alt="">
+          <div>
+            <h3>AS OF 2011</h3>
+            <h3>The number of college students has exceeded one million</h3>
+            <p>武汉是中国重要的科教研发和新兴产业发展基地。截至2011年，武汉大学生人数已超过100万，在世界所有城市中名列第一。武汉高等院校高达82所，仅次于北京。近年来，武汉经济大幅增长，是国内“唯一能够实现制造产业升级换代的城市”和中国发展速度最快的极少数城市之一。</p>
+          </div>  
+        </div>
+        <div class="left time">
+          <img src="https://img11.soufunimg.com/open/2018_03/30/M00/1B/80/ChCE4Fq9y5KIQYwdAAGjMfwKw74ABAkxgJnPKMAAaNJ001.jpg" alt="">
+          <div>
+            <h3>OCTOBER 2017</h3>
+            <h3>The title of "city of design"</h3>
+            <p>2017年10月，联合国教科文组织批准武汉市全球创意城市网络项目，授予武汉“设计之都”称号，成为继深圳、上海、北京之后的中国第四个“设计之都”。同年12月，武汉荣膺“2017年度城市创新”奖，城市创新能力在全国排名第二。</p>
+          </div>  
+        </div>
+      </div>
+      <h3 class="tag">BE PART OF OUR STOR</h3>
+    </section>
+    <section id="team">
+      <h2>OUR AMAZING TEAM</h2>
+      <p>Lorem ipsum dolor sit amet consectetur</p>
+      <ul class="team">
+        <li>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB-2uKwNzfnfC-4YM4vcp3ftD565jDrapof81NRGTwpBA4BiRp" alt="">
+          <h3>Teemo</h3>
+          <p>Lead Developer</p>
+          <a class="iconfont" href="">&#xe6f0;</a>
+          <a class="iconfont" href="">&#xe61e;</a>
+          <a class="iconfont" href="">&#xe64a;</a>
+        </li>
+        <li>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfgvAldghtp3aPMX9wKNxr-vmuYvirZFe1trxyla4bb1dLWbOBPw" alt="">
+          <h3>Ezreal</h3>
+          <p>Lead Marketer</p>
+          <a class="iconfont" href="">&#xe6f0;</a>
+          <a class="iconfont" href="">&#xe61e;</a>
+          <a class="iconfont" href="">&#xe64a;</a>
+        </li>
+        <li>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6jnrY50EAIZPad6BFKzhOJiHBaHlW0qTfUE-JuWLrpqGVqdSy" alt="">
+          <h3>Pikachu</h3>
+          <p>Lead Designer</p>
+          <a class="iconfont" href="">&#xe6f0;</a>
+          <a class="iconfont" href="">&#xe61e;</a>
+          <a class="iconfont" href="">&#xe64a;</a>
+        </li>
+      </ul>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+    </section>  
+    <div class="logo">
+        <a href="">
+          <img src="https://www.szquanli.com/uploads/allimg/160620/2-160620095414.png" alt="">
+        </a>
+        <a href="">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoykJ5xXtk2zChPlTq83i_oF0j4FERuulp3qnzKZ60tjBVoIlaVw" alt="">
+        </a>
+        <a href="">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCiv42MN-Yr7D_RfVz4HYUazFcAYoVh5p5jSEdUhcyfVqjJ1LvDw" alt="">
+        </a>
+        <a href="">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpY4HpIZyw4usKachjT4UnNKvbv3htx1C0i01TFXYX9NYrpwZNwQ" alt="">
+        </a>
+    </div> 
+  </main>
+  <footer>
+    <section id="contact" class="clearfix">
+      <h2>CONTACT US</h2>
+      <p>Lorem ipsum dolor sit amet consectetur.</p>
+      <a href="">SEND MESSAGE</a>
+      <ul>
+        <li><input type="text" placeholder="YOUR NAME *"></li>
+        <li><input type="text" placeholder="YOUR EMAIL *"></li>
+        <li><input type="text" placeholder="YOUR PHONE *"></li>
+      </ul>
+      <div>
+        <textarea placeholder="YOUR MESSAGE *" name="" id="" cols="30" rows="10"></textarea>
+    </section>
+    <div class="last-nav">
+      <p>Copyright © Your Website 2014</p>
+      <a class="iconfont" href="">&#xe6f0;</a>
+      <a class="iconfont" href="">&#xe61e;</a>
+      <a class="iconfont" href="">&#xe64a;</a>
+      <span>
+        <a class="footer" href="">Privacy Policy</a>
+        <a class="footer" href="">Terms of Use</a>
+      </span>
+    </div>
+  </footer>
+</body>
+</html>
