@@ -39,7 +39,8 @@ kbd:hover > button
 }
 body
 {
-  background: grey ;
+  background: grey url(./img/wall.jpg) no-repeat ;
+  background-size: cover;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -69,4 +70,12 @@ kbd > span
   position: absolute;
   left: 4px;
   top: 2px;
+}
+kbd > img 
+{
+  width: 16px; 
+  height: 16px; 
+  position: absolute; 
+  left: 4px; 
+  bottom: 2px;
 }

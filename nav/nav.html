@@ -13,56 +13,111 @@
   </main>
   <footer></footer>
   <script>
-		  keys = 
+		var hasho = init()
+		var keys = hasho['keys']
+		var hash = hasho['hash']
+
+    generatekeyboard(keys,hash)
+
+		Listentouser(hash)
+
+		function init()
+		{
+		  var keys = 
       {
 				'0': {0:'q',1:'w',2:'e',3:'r',4:'t',5:'y',6:'u',7:'i',8:'o',9:'p',length:10},
 				'1': {0:'a',1:'s',2:'d',3:'f',4:'g',5:'h',6:'j',7:'k',8:'l',length:9},
 				'2': {0:'z',1:'x',2:'c',3:'v',4:'b',5:'n',6:'m',length:7},
 				'length': 3
 			}	
-      hash = 
-      {'q': 'qq.com', 'w': 'weibo.com', 'e': 'ele.me', 'r': 'renren.com', 't': 'tianya.com', 'y': 'youtube.com', 'u': 'uc.com' , 'i': 'iqiyi.com', 'o': 'opera.com', 'p': undefined, 'a': 'acfun.tv', 's': 'sohu.com', 'z': 'zhihu.com', 'm': 'www.mcdonalds.com.cn'
+      var hash = {
+				'q': 'www.qq.com', 'w': 'weibo.com', 'e': 'www.ele.me', 'r': 'www.renren.com', 't': 'www.tianya.cn', 'u': 'www.uc.cn' , 'i': 'www.iqiyi.com', 'o': 'opera.com', 'p': undefined, 'a': 'www.acfun.cn','s': 'www.sohu.com','d': 'dribbble.com','g': 'github.com', 'j': 'www.jianshu.com', 'z': 'www.zhihu.com','b': 'www.bilibili.com', 'm': 'www.mcdonalds.com.cn'
 			}
-			hashInLocalStorage = JSON.parse(localStorage.getItem('zzz') || 'null')
-		  if(hashInLocalStorage)
-      {
+			var hashInLocalStorage = getFromLocalStorage('zzz') 
+			if(hashInLocalStorage) {
 				hash = hashInLocalStorage
 			}
+			return {
+				"keys": keys,
+				"hash": hash
+		  }
+		}
+
+		function getFromLocalStorage(name) {
+			return JSON.parse(localStorage.getItem(name) || 'null')
+		}
+
+		function generatekeyboard(keys,hash) {
 			for(var index=0; index< keys['length']; index = index+1 )
       {
-				div = document.createElement('div')
+				var div = tag('div')
 				main.appendChild(div)
 				div.className = 'row'
+
 			  var row = keys[index]  // 第一个数组  第二个数组  第三个数组
         for(var index2 =0;index2< row['length']; index2 = index2 + 1)
         {
-          kbd = document.createElement('kbd')
+          var kbd = tag('kbd')
 					div.appendChild(kbd)
-					span = document.createElement('span')
-				  span.textContent = row[index2]
-					kbd.appendChild(span)
-          button = document.createElement('button')
-          button.textContent = '编辑'
-					kbd.appendChild(button)
-					button.id = row[index2]
-				  button.onclick = function(qwer)
-          {
-						var button2 = qwer['target']
-						var key = button2['id'] // q w e r t
-						var x = prompt('给我一个网址') // qq.com
-						hash[key] = x  // hash 变更
-						localStorage.setItem('zzz', JSON.stringify(hash))
-          }
-        }
 
+					var span = tag('span')
+				  span.textContent = row[index2]
+
+          var button = createButton(row[index2])
+
+				  var img = createImage(hash[row[index2]])
+
+					kbd.appendChild(span)
+				  kbd.appendChild(img)
+			    kbd.appendChild(button)
+        }
 		  }
+		}
+
+		function tag(tagName){
+			return document.createElement(tagName) 
+		}
+
+		function createButton(id){
+			var button = tag('button')
+			button.textContent = '编辑'
+			button.id = id
+			button.onclick = function(qwer){
+				var button2 = qwer['target']
+				var img2 = button2.previousSibling
+				var key = button2['id'] // q w e r t
+				var x = prompt('给我一个网址') // qq.com
+				hash[key] = x  // hash 变更
+				img2.src = 'http://'+ x + '/favicon.ico'
+				img2.onerror = function(xxx){
+					xxx.target.src = './img/5a05afbc5e183.png'
+				}
+				localStorage.setItem('zzz', JSON.stringify(hash))
+			}
+			return button
+		}
+
+		function createImage(domain){
+			var img = tag('img')
+			if(domain){
+				img.src = 'http://'+ domain + '/favicon.ico'
+			}else{
+				img.src = './img/5a05afbc5e183.png'
+			}
+			img.onerror = function(xxx){
+				xxx.target.src = './img/5a05afbc5e183.png'
+			}
+			return img
+		}
+
+		function Listentouser(hash) {
       document.onkeypress = function(qwert)
       {
 				var key = qwert['key'] // q w e
 				var website = hash[key]
-				//location.href = 'http://'+website
 				window.open('http://'+website, '_blank')
 			}
+		}
   </script> 
 </body>
 </html>
