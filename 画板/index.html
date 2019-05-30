@@ -9,10 +9,38 @@
 </head>
 <body>
   <canvas id="canvas"></canvas>
-  <div id=actions class="actions">
-    <button id=eraser>橡皮擦</button>
-    <button id=brush>画笔</button>
+  <div id="actions" class="actions">
+    <svg class="icon" id="pen">
+        <use xlink:href="#icon-bi"></use>
+    </svg>
+    <svg class="icon" id="eraser">
+        <use xlink:href="#icon-xiangpica"></use>
+    </svg>
+    <svg class="icon" id="download">
+        <use xlink:href="#icon-xiazai"></use>
+    </svg>
+    <svg class="icon" id="clear">
+        <use xlink:href="#icon-qingchu"></use>
+    </svg> 
   </div>
+  <ul class="color">
+    <li id="red" class="red"></li>
+    <li id="green" class="green"></li>
+    <li id="blue" class="blue"></li>
+    <li id="purple" class="purple"></li>
+    <li id="yellow" class="yellow"></li>
+    <li id="pink" class="pink"></li>
+    <li id="gray" class="gray"></li>
+  </ul>
+  <ul class="sizes">
+      <li>粗细</li>
+      <li id="size1"></li>
+      <li id="size2"></li>
+      <li id="size3"></li>
+      <li id="size4"></li>
+      <li id="size5"></li>
+  </ul>
   <script src="./main.js"></script>
+  <script src="//at.alicdn.com/t/font_1220288_12c23s1waab.js"></script>
 </body>
 </html>
