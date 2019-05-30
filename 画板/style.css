@@ -1,0 +1,17 @@
+#canvas{
+  background: #fff;
+  display: block;
+}
+
+body{
+  margin: 0px;
+}
+
+.actions{
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}
+.actions>button {
+  margin: 10px;
+}
