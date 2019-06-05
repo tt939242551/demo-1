@@ -31,7 +31,7 @@ ul {
   top: 0px;
 }
 .mask {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.6);
   height: 515px;
   width: 100%;
 }
@@ -42,11 +42,11 @@ header .logo {
   margin-bottom: 4px;
   float: left;
 }
-.logo .rs{
+.logo .rs {
   color: #e6686a;
   margin-right: 4px;
 }
-.logo .card{
+.logo .card {
   color: #9A9DA2;
 }
 
@@ -54,19 +54,19 @@ header nav {
   float: right;
   font-size: 12px;
 }
-header nav a{
+header nav a {
   display: inline-block;
   color: rgba(255, 255, 255, 0.7);
   font-weight: bold;
   padding: 5px 0 5px 0;
   border-bottom: 3px solid transparent;
 }
-nav ul>li{
+nav ul>li {
   float: left;
   margin-left: 17px;
   margin-right: 17px;
 }
-header nav a:hover{
+header nav a:hover {
   border-bottom-color: #DC6465;
 }
 .cards {
@@ -148,7 +148,7 @@ header nav a:hover{
   color: white;
   vertical-align: top;
 }
-.media > a:hover{
+.media > a:hover {
   background: #CF5D5F;
 }
 body > main {
@@ -234,50 +234,50 @@ section>h2 {
   text-align: center;
   margin-bottom: 100px;
 }
-.portfolio > nav > ol{
+.portfolio > nav > ol {
   margin: 0 auto;
   display: inline-block;
   vertical-align: top;
 }
-.portfolio > nav > ol > li{
+.portfolio > nav > ol > li {
   float: left;
   margin-left: 40px;
   cursor: pointer;
 }
-.portfolio > nav > ol > li:first-child{
+.portfolio > nav > ol > li:first-child {
   margin-left: 0;
 }
-.portfolio > nav{
+.portfolio > nav {
   display: inline-block;
   vertical-align: top;
   margin-top: 32px;
 }
-.portfolio > nav .bar{
+.portfolio > nav .bar {
   height: 5px;
   background: white;
   margin-top: 5px;
   margin-bottom: 28px;
   border-radius: 2px;
 }
-.portfolio > nav .bar-inner{
+.portfolio > nav .bar-inner {
   height: 100%;
   background: #E6686A;
   border-radius: 2px;
   transition: all 0.4s;
 }
-.portfolio > nav .bar.state-1 .bar-inner{
+.portfolio > nav .bar.state-1 .bar-inner {
   margin-left: 0;
   width: 31px;
 }
-.portfolio > nav .bar.state-2 .bar-inner{
+.portfolio > nav .bar.state-2 .bar-inner {
   margin-left: 73px;
   width: 31px;
 }
-.portfolio > nav .bar.state-3 .bar-inner{
+.portfolio > nav .bar.state-3 .bar-inner {
   margin-left: 145px;
   width: 90px;
 }
-.portfolio .works{
+.portfolio .works {
   position: relative;
   height: 597px
 }
