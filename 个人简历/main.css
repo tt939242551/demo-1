@@ -29,6 +29,7 @@ ul {
   position: absolute;
   width: 100%;
   top: 0px;
+  transition: all 0.5s;
 }
 .mask {
   background-color: rgba(0, 0, 0, 0.6);
@@ -41,6 +42,18 @@ header .logo {
   margin-top: 3px;
   margin-bottom: 4px;
   float: left;
+}
+header.sticky {
+  position: fixed;
+  top: 0; 
+  left: 0;
+  background: #efefef;
+  padding: 10px 16px; 
+  z-index: 1;
+  box-shadow: 0 0 10px rgba(0,0,0,0.25);
+}
+.sticky ul>li>a {
+  color: #3d4451;
 }
 .logo .rs {
   color: #e6686a;
@@ -58,16 +71,57 @@ header nav a {
   display: inline-block;
   color: rgba(255, 255, 255, 0.7);
   font-weight: bold;
-  padding: 5px 0 5px 0;
-  border-bottom: 3px solid transparent;
+  padding: 10px 0 4px 0;
 }
 nav ul>li {
   float: left;
   margin-left: 17px;
   margin-right: 17px;
+  position: relative;
 }
-header nav a:hover {
-  border-bottom-color: #DC6465;
+nav > ul > li.active > a::after { 
+  content: '';
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #e06567;
+  height: 3px;
+  animation: menuSlide .3s;
+}
+@keyframes menuSlide{
+  0%{ width: 0; }
+  100%{ width: 100%; }
+}
+header .submenu{
+  display: none;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 4px);
+  background: #fff;
+  color: #3d4451;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+li.active> .submenu{
+  display: block;
+  animation: submenuSlide .3s;
+}
+@keyframes submenuSlide{
+  0%{
+    margin-right: 100%;
+  }
+  100%{
+    margin-right: 0%;
+  }
+}
+.submenu > a {
+  color: #3d4451;
+  white-space: nowrap;
+  padding: 8px 10px;
+}
+.submenu > a:hover {
+  background: #ccc; 
 }
 .cards {
   max-width: 940px;
