@@ -206,7 +206,8 @@ li.active> .submenu{
   background: #CF5D5F;
 }
 body > main {
-  margin-top: -340px;
+  margin-top: -420px;
+  padding-top: 80px;
 }
 body > main .button {
   font-size: 16px;
@@ -242,7 +243,7 @@ body > main > p {
 section {
   max-width: 940px;
   margin: 0 auto;
-  margin-top: 60px;
+  padding-top: 80px;
 }
 section>h2 {
   text-align: center;
