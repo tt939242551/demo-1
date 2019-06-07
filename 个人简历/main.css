@@ -79,7 +79,7 @@ nav ul>li {
   margin-right: 17px;
   position: relative;
 }
-nav > ul > li.active > a::after { 
+nav > ul > li.active > a::after,nav > ul > li.highlight > a::after { 
   content: '';
   display: block;
   position: absolute;
@@ -122,6 +122,14 @@ li.active> .submenu{
 }
 .submenu > a:hover {
   background: #ccc; 
+}
+[data-x].offset{
+  transform: translateY(200px);
+}
+
+[data-x]{
+  transform: translateY(0);
+  transition: all 0.5s;
 }
 .cards {
   max-width: 940px;
@@ -206,8 +214,7 @@ li.active> .submenu{
   background: #CF5D5F;
 }
 body > main {
-  margin-top: -420px;
-  padding-top: 80px;
+  margin-top: -320px;
 }
 body > main .button {
   font-size: 16px;
@@ -243,7 +250,7 @@ body > main > p {
 section {
   max-width: 940px;
   margin: 0 auto;
-  padding-top: 80px;
+  margin-top: 80px;
 }
 section>h2 {
   text-align: center;
