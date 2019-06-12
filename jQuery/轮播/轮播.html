@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://js.jirengu.com
+
+Copyright (c) 2019 by anonymous (http://js.jirengu.com/vojobabupo/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html lang="CN-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Dog</title>
+  <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+ 
+  
+<style id="jsbin-css">
+.images {
+  display: flex;
+  align-items: flex-start;
+  transition: all 0.5s;
+}
+.window {
+  width: 400px;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 100px;
+  text-align: center;
+}
+.red {
+  color: red;
+}
+
+#buttons > span {
+  display: inline-block;
+  padding: 10px 12px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+  <div class="window">
+    <div class="images" id='images'>
+      <img src="https://cn.bing.com/th?id=OIP.09LNwKF3jmBus3xtXw2tKwHaHa&pid=Api&rs=1&p=0" width="400px" alt="">
+      <img src="http://cdn.skim.gs/image/upload/c_fill,dpr_1.0,w_940/v1456335858/msi/Pomeranian_njccao.jpg" width="400px" alt="">
+      <img src="https://cn.bing.com/th?id=OIP.zf6yvQ8rkteEFRNGi_HW5gHaHa&pid=Api&w=500&h=500&rs=1&p=0" width="400px" alt="">
+      <img src="https://cn.bing.com/th?id=OIP.bh-VZIzxvLBd5PFtAhNebwHaHa&pid=Api&w=1200&h=1200&rs=1&p=0" width="400px" alt="">
+      <img src="https://cn.bing.com/th?id=OIP.NHcuC3OgNBjVZxUw-hjSEAHaHa&pid=Api&w=1000&h=1000&rs=1&p=0" width="400px" alt="">
+    </div>
+    <span id='buttons'>
+        <span>第1张</span>
+        <span>第2张</span>
+        <span>第3张</span>
+        <span>第4张</span>
+        <span>第5张</span>
+    </span>
+  </div>
+<script id="jsbin-javascript">
+var allButtons = $('#buttons > span')
+
+for (let i = 0; i < allButtons.length; i++) {
+  $(allButtons[i]).on('click',function(x) {
+    var index = $(x.currentTarget).index()
+    var p = index * -400
+    $('#images').css({
+      transform: 'translate(' + p + 'px)'
+    })
+    n = index
+    activeButton(allButtons.eq(n))
+  })
+}
+
+var n = 0 
+var size = allButtons.length
+allButtons.eq(n % size).trigger('click')
+
+var timerId = setTimer()
+
+$('.window').on('mouseenter',function() {
+  window.clearInterval(timerId)
+})
+
+$('.window').on('mouseleave',function() {
+  timerId = setTimer()
+})
+
+function setTimer() {
+  return setInterval(() => {
+    n += 1
+    allButtons.eq(n % size).trigger('click')
+  }, 2000)
+}
+
+function activeButton($button) {
+  $button.addClass('red')
+    .siblings('.red').removeClass('red')
+}
+</script>
+</body>
+</html>

@@ -1,5 +1,4 @@
 var allButtons = $('#buttons > span')
-console.log(allButtons)
 for (let i = 0; i < allButtons.length; i++) {
   $(allButtons[i]).on('click',function(x) {
     var index = $(x.currentTarget).index()
