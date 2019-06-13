@@ -85,11 +85,11 @@ $('.images > img:nth-child(3)').addClass('enter')
 let n = 1
 var timerId = setTimer()
 
-$('.works').on('mouseenter',function() {
+$('.images').on('mouseenter',function() {
   window.clearInterval(timerId)
 })
 
-$('.works').on('mouseleave',function() {
+$('.images').on('mouseleave',function() {
   timerId = setTimer()
 })
 
