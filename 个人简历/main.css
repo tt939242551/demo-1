@@ -301,54 +301,74 @@ section.skills.offset .progress{
   text-align: center;
   margin-bottom: 100px;
 }
-.portfolio > nav > ol {
+.portfolio  nav > ol {
   margin: 0 auto;
   display: inline-block;
   vertical-align: top;
 }
-.portfolio > nav > ol > li {
+.portfolio  nav > ol > li {
   float: left;
   margin-left: 40px;
   cursor: pointer;
 }
-.portfolio > nav > ol > li:first-child {
+.portfolio  nav > ol > li:first-child {
   margin-left: 0;
 }
-.portfolio > nav {
+.portfolio  nav {
   display: inline-block;
   vertical-align: top;
   margin-top: 32px;
 }
-.portfolio > nav .bar {
+.portfolio nav .bar {
   height: 5px;
   background: white;
   margin-top: 5px;
   margin-bottom: 28px;
   border-radius: 2px;
 }
-.portfolio > nav .bar-inner {
+.portfolio nav .bar-inner {
   height: 100%;
   background: #E6686A;
   border-radius: 2px;
   transition: all 0.4s;
 }
-.portfolio > nav .bar.state-1 .bar-inner {
+.portfolio  nav .bar.state-1 .bar-inner {
   margin-left: 0;
   width: 31px;
 }
-.portfolio > nav .bar.state-2 .bar-inner {
+.portfolio  nav .bar.state-2 .bar-inner {
   margin-left: 73px;
   width: 31px;
 }
-.portfolio > nav .bar.state-3 .bar-inner {
+.portfolio  nav .bar.state-3 .bar-inner {
   margin-left: 145px;
   width: 90px;
 }
-.portfolio .works {
-  position: relative;
-  height: 597px
+.works {
+  width: 800px;
+  margin: 0 auto;
 }
-.portfolio .works > .big,
-.portfolio .works > .small {
+.works .images {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+.portfolio .works .images> img {
   position: absolute;
+  width: 800px;
+  height: 600px;
+  top: 0;
+  transition: all 1000ms;
+}
+.images > img.current{
+  left: 0;
+  transform: translateX(0);
+  z-index: 1;
+}
+.images > img.leave{
+  transform: translateX(-100%);
+}
+.images > img.enter{
+  transform: translateX(100%);
 }
