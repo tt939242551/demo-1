@@ -2,7 +2,7 @@ var allButtons = $('#buttons > span')
 for (let i = 0; i < allButtons.length; i++) {
   $(allButtons[i]).on('click',function(x) {
     var index = $(x.currentTarget).index()
-    var p = index * -250
+    var p = index * -920
     $('#images').css({
       transform: 'translate(' + p + 'px)'
     })
@@ -14,9 +14,7 @@ for (let i = 0; i < allButtons.length; i++) {
 var n = 0 
 var size = allButtons.length
 allButtons.eq(n % size).trigger('click')
-
 var timerId = setTimer()
-
 $('.window').on('mouseenter',function() {
   window.clearInterval(timerId)
 })
@@ -33,6 +31,6 @@ function setTimer() {
 }
 
 function activeButton($button) {
-  $button.addClass('red')
-    .siblings('.red').removeClass('red')
+  $button.addClass('act')
+    .siblings('.act').removeClass('act')
 }
