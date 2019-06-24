@@ -28,7 +28,7 @@
   height: 100%;
   padding-left: 16px;
   overflow: hidden;
-  background: rgb(0,43,54);
+  background: white;
   display: none;
 }
 #paper>.html{

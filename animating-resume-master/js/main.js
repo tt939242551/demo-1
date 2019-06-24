@@ -11,7 +11,7 @@ function writeCss(prefix, code, fn){
       window.clearInterval(id)
       fn && fn.call()
     }
-  }, 10)
+  }, 40)
 }
 function writeMarkdown(markdown, fn){
   let domPaper = document.querySelector('#paper>.content')
@@ -34,20 +34,19 @@ var css1 = `/*
  * 首先准备一些样式
  */
 *{
-  transition: all 0.8s;
+  transition: all 1s;
 }
 html{
-  color: rgb(222,222,222); background: rgb(0,43,54);
+  background: #eee;
 }
 #code{
   border: 1px solid #aaa;
   padding: 16px;
 }
 /* 我需要一点代码高亮 */
-.token.selector{ color: rgb(133,153,0); }
-.token.property{ color: rgb(187,137,0); }
-.token.punctuation{ color: yellow; }
-.token.function{ color: rgb(42,161,152); }
+.token.selector{ color: #690; }
+.token.property{ color: #905; }
+.token.punctuation{ color: #059; }
 /* 加一个呼吸效果 */
 #code{
   animation: breath 0.5s infinite alternate-reverse;
@@ -71,11 +70,12 @@ var css2 = `
 `
 var md = `
 # 自我介绍
-我叫 XXX
-1990 年 1 月出生
-XXX 学校毕业
-自学前端半年
-希望应聘前端开发岗位
+- 姓名: XXX
+- 年龄: 1993 年 1 月
+- 学历: 本科
+- 学校: XXX 学校毕业
+- 工作经历: 自学前端半年
+- 应聘岗位: 希望应聘前端开发岗位
 # 技能介绍
 熟悉 JavaScript CSS
 # 项目介绍
@@ -83,16 +83,12 @@ XXX 学校毕业
 2. XXX 简历
 3. XXX 画板
 # 博客
-- QQ xxxxxxxx
-- Email xxxxxxxx
-- 手机 xxxxxxx
-- QQ xxxxxxxx
-- Email xxxxxxxx
-- 手机 xxxxxxx
-# 联系方式
-- QQ xxxxxxxx
-- Email xxxxxxxx
-- 手机 xxxxxxx
+1.  xxxxxxxx
+2.  xxxxxxxx
+3.  xxxxxxx
+4.  xxxxxxxx
+5.  xxxxxxxx
+6.  xxxxxxx
 # 联系方式
 - QQ xxxxxxxx
 - Email xxxxxxxx
