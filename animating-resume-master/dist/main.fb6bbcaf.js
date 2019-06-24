@@ -132,7 +132,7 @@ function writeCss(prefix, code, fn) {
       window.clearInterval(id);
       fn && fn.call();
     }
-  }, 40);
+  }, 10);
 }
 
 function writeMarkdown(markdown, fn) {
@@ -150,9 +150,9 @@ function writeMarkdown(markdown, fn) {
   }, 30);
 }
 
-var css1 = "/* \n * \u9762\u8BD5\u5B98\u4F60\u597D\uFF0C\u6211\u662FXXX\n * \u53EA\u7528\u6587\u5B57\u4F5C\u505A\u6211\u4ECB\u7ECD\u592A\u5355\u8C03\u4E86\n * \u6211\u5C31\u7528\u4EE3\u7801\u6765\u4ECB\u7ECD\u5427\n * \u9996\u5148\u51C6\u5907\u4E00\u4E9B\u6837\u5F0F\n */\n\n*{\n  transition: all 1s;\n}\nhtml{\n  background: #eee;\n}\n#code{\n  border: 1px solid #aaa;\n  padding: 16px;\n}\n\n/* \u6211\u9700\u8981\u4E00\u70B9\u4EE3\u7801\u9AD8\u4EAE */\n\n.token.selector{ color: #690; }\n.token.property{ color: #905; }\n\n/* \u52A0\u4E00\u4E2A\u547C\u5438\u6548\u679C */\n\n#code{\n  animation: breath 1s infinite alternate-reverse;\n}\n\n/* \u73B0\u5728\u6B63\u5F0F\u5F00\u59CB */\n\n/* \u6211\u9700\u8981\u4E00\u5F20\u767D\u7EB8 */\n\n#code-wrapper{\n  width: 50%; left: 0; position: fixed; \n  height: 100%;\n}\n\n#paper > .content {\n display: block;\n}\n\n/* \u4E8E\u662F\u6211\u5C31\u53EF\u4EE5\u5728\u767D\u7EB8\u4E0A\u5199\u5B57\u4E86\uFF0C\u8BF7\u770B\u53F3\u8FB9 */\n";
-var css2 = "\n/* \u63A5\u4E0B\u6765\u7528\u4E00\u4E2A\u4F18\u79C0\u7684\u5E93 marked.js\n * \u628A Markdown \u53D8\u6210 HTML\n */\n\n";
-var md = "\n# \u81EA\u6211\u4ECB\u7ECD\n\n\u6211\u53EB XXX\n1990 \u5E74 1 \u6708\u51FA\u751F\nXXX \u5B66\u6821\u6BD5\u4E1A\n\u81EA\u5B66\u524D\u7AEF\u534A\u5E74\n\u5E0C\u671B\u5E94\u8058\u524D\u7AEF\u5F00\u53D1\u5C97\u4F4D\n\n# \u6280\u80FD\u4ECB\u7ECD\n\n\u719F\u6089 JavaScript CSS\n\n# \u9879\u76EE\u4ECB\u7ECD\n\n1. XXX \u8F6E\u64AD\n2. XXX \u7B80\u5386\n3. XXX \u753B\u677F\n\n# \u8054\u7CFB\u65B9\u5F0F\n\n- QQ xxxxxxxx\n- Email xxxxxxxx\n- \u624B\u673A xxxxxxx\n\n# \u8054\u7CFB\u65B9\u5F0F\n\n- QQ xxxxxxxx\n- Email xxxxxxxx\n- \u624B\u673A xxxxxxx\n\n";
+var css1 = "/* \n * \u9762\u8BD5\u5B98\u4F60\u597D\uFF0C\u6211\u662FXXX\n * \u53EA\u7528\u6587\u5B57\u4F5C\u505A\u6211\u4ECB\u7ECD\u592A\u5355\u8C03\u4E86\n * \u6211\u5C31\u7528\u4EE3\u7801\u6765\u4ECB\u7ECD\u5427\n * \u9996\u5148\u51C6\u5907\u4E00\u4E9B\u6837\u5F0F\n */\n*{\n  transition: all 0.8s;\n}\nhtml{\n  color: rgb(222,222,222); background: rgb(0,43,54);\n}\n#code{\n  border: 1px solid #aaa;\n  padding: 16px;\n}\n/* \u6211\u9700\u8981\u4E00\u70B9\u4EE3\u7801\u9AD8\u4EAE */\n.token.selector{ color: rgb(133,153,0); }\n.token.property{ color: rgb(187,137,0); }\n.token.punctuation{ color: yellow; }\n.token.function{ color: rgb(42,161,152); }\n/* \u52A0\u4E00\u4E2A\u547C\u5438\u6548\u679C */\n#code{\n  animation: breath 0.5s infinite alternate-reverse;\n}\n/* \u73B0\u5728\u6B63\u5F0F\u5F00\u59CB */\n/* \u6211\u9700\u8981\u4E00\u5F20\u767D\u7EB8 */\n#code-wrapper{\n  width: 50%; left: 0; position: fixed; \n  height: 100%;\n}\n#paper > .content {\n display: block;\n}\n/* \u4E8E\u662F\u6211\u5C31\u53EF\u4EE5\u5728\u767D\u7EB8\u4E0A\u5199\u5B57\u4E86\uFF0C\u8BF7\u770B\u53F3\u8FB9 */\n";
+var css2 = "\n/* \u63A5\u4E0B\u6765\u7528\u4E00\u4E2A\u4F18\u79C0\u7684\u5E93 marked.js\n * \u628A Markdown \u53D8\u6210 HTML\n */\n";
+var md = "\n# \u81EA\u6211\u4ECB\u7ECD\n\u6211\u53EB XXX\n1990 \u5E74 1 \u6708\u51FA\u751F\nXXX \u5B66\u6821\u6BD5\u4E1A\n\u81EA\u5B66\u524D\u7AEF\u534A\u5E74\n\u5E0C\u671B\u5E94\u8058\u524D\u7AEF\u5F00\u53D1\u5C97\u4F4D\n# \u6280\u80FD\u4ECB\u7ECD\n\u719F\u6089 JavaScript CSS\n# \u9879\u76EE\u4ECB\u7ECD\n1. XXX \u8F6E\u64AD\n2. XXX \u7B80\u5386\n3. XXX \u753B\u677F\n# \u535A\u5BA2\n- QQ xxxxxxxx\n- Email xxxxxxxx\n- \u624B\u673A xxxxxxx\n- QQ xxxxxxxx\n- Email xxxxxxxx\n- \u624B\u673A xxxxxxx\n# \u8054\u7CFB\u65B9\u5F0F\n- QQ xxxxxxxx\n- Email xxxxxxxx\n- \u624B\u673A xxxxxxx\n# \u8054\u7CFB\u65B9\u5F0F\n- QQ xxxxxxxx\n- Email xxxxxxxx\n- \u624B\u673A xxxxxxx\n\n";
 var css3 = "\n/*\n * \u8FD9\u5C31\u662F\u6211\u7684\u4F1A\u52A8\u7684\u7B80\u5386\n * \u8C22\u8C22\u89C2\u770B\n */\n";
 writeCss('', css1, function () {
   // writeCss call the function
