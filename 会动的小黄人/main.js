@@ -7,13 +7,13 @@
       .siblings('.active').removeClass('active')
     switch(speed){
       case 'slow':
-        duration = 60
-        break
-      case 'normal':
         duration = 30
         break
-      case 'fast':
+      case 'normal':
         duration = 10
+        break
+      case 'fast':
+        duration = 5
         break
     }
   })
@@ -36,13 +36,6 @@
   }
   let code = `/*
   * 准备  开始
-  */
-  h1 {
-    text-align: center;
-    font-size: 50px;
-    font-family: Oswald;
-    color: #f47f1b;
-  }
   /*
   * 首先，需要准备小黄人的身体
   */
