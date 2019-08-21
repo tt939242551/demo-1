@@ -42,7 +42,7 @@
         display: flex;
       }
   </style>
-  <script src="../jQuery/轮播/jquery-3.4.1.js"></script>
+  <script src="./jquery-3.4.1.js"></script>
   <link rel="stylesheet" href="./main.css">
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1198374_pht01lmwsnr.css">
   </head>
@@ -64,17 +64,17 @@
           <li>
             <a href="#siteWorks">作品</a>
             <div class="submenu">
-              <a href="">作品1</a>
-              <a href="">作品2</a>
-              <a href="">作品3</a>
+              <a href="https://tt939242551.github.io/lei-gulu/">作品1</a>
+              <a href="https://tt939242551.github.io/vue-CNode/vue-app/dist/index.html">作品2</a>
+              <a href="https://tt939242551.github.io/Vue-youzan/vue-app/dist/index.html">作品3</a>
             </div>
           </li>
           <li>
             <a href="#">博客</a>
             <div class="submenu">
-              <a href="">博客1</a>
-              <a href="">博客2</a>
-              <a href="">博客3</a>
+              <a href="https://www.jianshu.com/p/6ac6719c2bb2">博客1</a>
+              <a href="https://www.jianshu.com/p/fb8b5b89f2bb">博客2</a>
+              <a href="https://www.jianshu.com/p/20b145e5ef4f">博客3</a>
             </div>
           </li>
           <li><a href="#siteMessage">留言</a></li>
@@ -101,16 +101,16 @@
               <dt>年龄</dt>
               <dd>26</dd>
               <dt>所在城市</dt>
-              <dd>武汉</dd>
+              <dd>深圳</dd>
               <dt>邮箱</dt>
               <dd>939242551@qq.com</dd>
               <dt>手机</dt>
-              <dd>13812345678</dd>
+              <dd>15215429326</dd>
             </dl>
           </div>
         </div>
         <footer class="media">
-          <a href="#"><i class="iconfont icon-github"></i></a>
+          <a href="https://github.com/tt939242551/"><i class="iconfont icon-github"></i></a>
           <a href="#"><i class="iconfont icon-tuite"></i></a>
           <a href="#"><i class="iconfont icon-weixi"></i></a>
           <a href="#"><i class="iconfont icon-lianshu"></i></a>
@@ -119,8 +119,8 @@
       </div>
       <p><a class="button" href="#">下载 PDF 简历</a></p>  
       <p class="selfIntroduction">
-        徐磊，前端工程师，现在在 饥人谷 学前端课程。<br>
-        技能：前端开发，Rails 开发，Node.js 开发
+        徐磊，应聘前端工程师，现在待业在家,学习前端课程。<br>
+        技能：HTML CSS JavaScript Vue.js 微信小程序
       </p>
     </main>
     <section data-x id="siteSkills" class="skills offset">
@@ -131,7 +131,7 @@
             HTML 5 &amp; CSS 3
           </h3>
           <div class="progressBar">
-            <div class="progress" style="width: 60%;"></div>
+            <div class="progress" style="width: 70%;"></div>
           </div>
         </li>
         <li>
@@ -147,7 +147,7 @@
             jQuery
           </h3>
           <div class="progressBar">
-            <div class="progress" style="width: 50%"></div>
+            <div class="progress" style="width: 30%"></div>
           </div>
         </li>
         <li>
@@ -155,7 +155,7 @@
             Vue.js
           </h3>
           <div class="progressBar">
-            <div class="progress" style="width: 40%"></div>
+            <div class="progress" style="width: 80%"></div>
           </div>
         </li>
         <li>
@@ -163,7 +163,7 @@
             React.js
           </h3>
           <div class="progressBar">
-            <div class="progress"  style="width: 50%"></div>
+            <div class="progress"  style="width: 20%"></div>
           </div>
         </li>
         <li>
@@ -171,7 +171,7 @@
             Node.js
           </h3>
           <div class="progressBar">
-            <div class="progress"  style="width: 60%"></div>
+            <div class="progress"  style="width: 40%"></div>
           </div>
         </li>
       </ol>
@@ -181,7 +181,7 @@
       <div class="works window">
         <nav>
           <ol class="clearfix" id=buttons>
-            <li id="portfolio1">所有</li>
+            <li id="portfolio1">Vue造轮子</li>
             <li id="portfolio2">框架</li>
             <li id="portfolio3">原生JS&amp;CSS</li>
           </ol>
@@ -190,9 +190,9 @@
           </div>
         </nav>
         <div class="images" id=images>
-          <img src="./img/1.PNG" alt="作品1">
-          <img src="./img/2.PNG" alt="作品2">
-          <img src="./img/3.PNG" alt="作品3">
+          <a href="https://tt939242551.github.io/lei-gulu/"><img src="./img/UI组件.PNG" alt="作品1"></a>
+          <a href="https://tt939242551.github.io/vue-CNode/vue-app/dist/index.html"><img src="./img/框架.PNG" alt="作品2"></a>
+          <a href="https://tt939242551.github.io/demo-1/nav/nav.html"><img src="./img/2.PNG" alt="作品3"></a>
         </div>
       </div>
     </section>
@@ -201,11 +201,11 @@
       <ol id="messageList"></ol>
       <form id="postMessageForm" style="margin: 50px auto;
       max-width: 700px;">
-        <label for="">姓名</label>
-        <input type="text" name="name" style="width: 100px;height: 20px;">
-        <label for="">内容</label>
-        <input type="text" name="content" style="width: 300px;height: 20px">
-        <input type="submit" value="提交">
+        <label for="">姓名:</label>
+        <input type="text" name="name" class="username">
+        <label for="">内容:</label>
+        <input type="text" name="content" class="content">
+        <input type="submit" value="提交" class="submit">
       </form>
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>

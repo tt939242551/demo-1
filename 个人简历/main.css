@@ -334,14 +334,14 @@ section.skills.offset .progress{
 }
 .portfolio  nav .bar.state-1 .bar-inner {
   margin-left: 0;
-  width: 31px;
+  width: 76px;
 }
 .portfolio  nav .bar.state-2 .bar-inner {
-  margin-left: 73px;
+  margin-left: 118px;
   width: 31px;
 }
 .portfolio  nav .bar.state-3 .bar-inner {
-  margin-left: 145px;
+  margin-left: 190px;
   width: 90px;
 }
 .works {
@@ -355,7 +355,7 @@ section.skills.offset .progress{
   align-items: flex-start;
   transition: all 0.5s;
 }
-.portfolio .works .images> img {
+ #images img {
   width: 800px;
   height: 600px;
 }
@@ -370,4 +370,24 @@ section.skills.offset .progress{
 .message > ol > li {
   padding: 16px;
   border-bottom: 1px solid #ccc;
+}
+.message .username{
+ margin-right: 30px;
+ border-radius: 2px;
+ padding: 4px;
+ width: 150px;
+}
+.message .content{
+ margin-right: 30px;
+ border-radius: 1px;
+ padding: 4px;
+ width: 350px;
+}
+.message .submit{
+  padding: 5px 10px;
+  text-align: center;
+  color: #333;
+  border: 1px solid #aaa;
+  background: #ccc;
+  border-radius: 2px;
 }
