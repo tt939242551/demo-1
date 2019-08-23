@@ -32,8 +32,8 @@ header {
 
 
 header .avatar img {
-    width: 115px;
-    height: 136px;
+    width: 120px;
+    height: 132px;
     border-radius: 50%;
 
 }
@@ -254,8 +254,11 @@ main .right .project {
 .project .imgs {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 5px;
 }
-
+.project .img{
+  margin-bottom: 5px;
+}
 .project .imgs img {
     width: 30%;
     height: 30%;
