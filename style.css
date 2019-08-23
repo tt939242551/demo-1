@@ -26,14 +26,14 @@ header {
     align-items: center;
     background: #555;
     text-align: center;
-    padding: 25px 0;
+    padding: 13px 0;
     color: #fdfdfd;
 }
 
 
 header .avatar img {
     width: 115px;
-    height: 140px;
+    height: 136px;
     border-radius: 50%;
 
 }
@@ -263,8 +263,8 @@ main .right .project {
 
 }
 
-/* .project .img {
-} */
+.project  { margin-bottom: 6px} 
+
 
 .project .img img {
     width: 100%;
@@ -364,6 +364,8 @@ footer a {
     height: 100vh;
     z-index: -1;
 }
+
+.preview{padding-right: 30px;}
 
 @media screen and (max-width: 1000px) {
     .background {
