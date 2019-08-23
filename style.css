@@ -26,7 +26,7 @@ header {
     align-items: center;
     background: #555;
     text-align: center;
-    padding: 13px 0;
+    padding: 12px 0;
     color: #fdfdfd;
 }
 
@@ -35,7 +35,7 @@ header .avatar img {
     width: 120px;
     height: 132px;
     border-radius: 50%;
-
+    padding-top: 4px;
 }
 
 header .title {
@@ -374,6 +374,7 @@ footer a {
     .background {
         display: none;
     }
+    .preview{padding-right: 10px;}
 }
 
 .download-button{
