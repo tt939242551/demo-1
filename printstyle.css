@@ -8,13 +8,13 @@
 
 body {
     font-family: "Microsoft YaHei ";
-    width: 1000px;
 }
 
 
 .paper {
     margin: 0px auto;
     max-width: 1000px;
+    box-shadow: -1px 1px 10px rgba(0, 0, 0, 0.5);
     overflow: hidden;
 
 }
@@ -26,57 +26,52 @@ header {
     align-items: center;
     background: #555;
     text-align: center;
-    padding: 25px 0;
+    padding: 4px 0 8px 0;
     color: #fdfdfd;
 }
 
-
-header .avatar img {
-    width: 150px;
-    height: 150px;
+main .left .avatar {
+    text-align: center;
+    margin-bottom: 5px;
+}
+main .left .avatar > img {
+    width: 140px;
+    height: 144px;
     border-radius: 50%;
-
 }
 
 header .title {
-    margin-left: 30px;
+    margin: 0 auto;
+    padding: 4px 0;
 }
 
 header .title h1 {
-    margin-bottom: 10px;
+    margin-bottom: 3px;
 }
 
 header .title h2 {
     color: #dddddd;
 }
 
-
 main {
-    padding: 20px 0;
+    padding: 10px 0;
     display: flex;
     margin: 0 auto;
     background: #fdfdfd;
+    margin-bottom: 14px;
 }
 
-@media screen and (max-width: 700px) {
-    main {
-        flex-flow: wrap;
-    }
 
-}
 
 main .left {
     width: 30%;
     min-width: 280px;
     padding: 0 20px;
     margin: 0 auto;
+    padding-bottom: 20px;
 }
 
-@media screen and (max-width: 700px) {
-    main .left {
-        width: 100vw;
-    }
-}
+
 
 main .left .title-wrapper {
     display: flex;
@@ -97,11 +92,9 @@ main .left h3 {
 }
 
 main .left .line {
-    margin-left: 10px;
     flex: 1;
-    border-bottom: 1px solid #cbcbd3;
+    font-size: 14px;
 }
-
 .profile dl {
     display: flex;
     flex-flow: row wrap;
@@ -171,18 +164,27 @@ main .left .line {
     width: 20px;
     height: 20px;
 }
+.left .line .type {
+    display: flex;
+    align-items: center;
+    margin: 10px 0 10px 40px;
+}
+
+.left .line .type span {
+    margin-left: 9px;
+    color: #666666;
+}
+
+.left .line .type svg {
+    width: 22px;
+    height: 22px;
+}
 
 main .right {
     width: 70%;
-    padding: 0 20px;
+    padding-right: 20px;
     margin: 0 auto;
 
-}
-
-@media screen and (max-width: 700px) {
-    main .right {
-        width: 100vw;
-    }
 }
 
 
@@ -204,15 +206,11 @@ main .right h3 {
     color: #2b3131;
 }
 
-main .right p {
-line-height: 20px;
-}
-
 main .right .line {
-    margin-left: 10px;
     flex: 1;
     border-bottom: 1px solid #cbcbd3;
 }
+
 
 main .right .project .title {
     font-size: 16px;
@@ -241,8 +239,7 @@ main .right .project {
 
 .project .content-wrapper {
     border-left: 1px solid #cbcbd3;
-    margin-left: 15px;
-    padding-left: 25px;
+    padding-left: 20px;
 }
 
 .project a {
@@ -251,42 +248,30 @@ main .right .project {
     text-decoration: underline;
     word-wrap: break-word
 }
-
-.project .imgs {
-    display: flex;
-    justify-content: space-between;
-}
-
-.project .imgs img {
-    width: 30%;
-    height: 30%;
-    border: 1px solid #cbcbd3;
-
+.project p{
+    line-height: 18px;
 }
 
 
-.project .img img {
-    width: 100%;
-    border: 1px solid #cbcbd3;
-}
 
-.project .content-wrapper > img {
-    border: 1px solid #cbcbd3;
-    border-radius: 5px;
 
-}
+.project  { margin-bottom: 1px} 
+
+
+
 
 .skillInfo .skill-content {
-    margin: 5px 0 5px 40px;
+    margin: 4px 0 4px 20px;
 }
 
 .skillInfo .skill-content p {
+    line-height: 18px;
     font-size: 14px;
     color: #666666;
 }
 
 .education .education-content {
-    margin: 5px 0 5px 40px;
+    margin: 4px 0 4px 20px;
     font-size: 14px;
     color: #666666;
 }
@@ -296,15 +281,15 @@ main .right .project {
 }
 
 .aboutMe .aboutMe-content {
-    margin: 5px 0 0 40px;
+    margin: 4px 0 0 20px;
     font-size: 14px;
     color: #666666;
-
+    line-height: 18px;
 }
 
 footer {
-    height: 30px;
-    line-height: 30px;
+    height: 26px;
+    line-height: 26px;
     text-align: center;
     font-weight: bolder;
     font-size: 18px;
@@ -316,63 +301,33 @@ footer a {
     color: #aaaaaa;
 }
 
-
-.qrCode {
-    position: fixed;
-    min-width: 300px;
-    max-width: 800px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: none;
-}
-
-.qrCode img {
-    width: 100%;
-    border: 1px solid #cbcbd3;
-
-}
-
-.qrSwitch:hover {
-    cursor: pointer;
-}
-
-.qrCode.active {
-    display: block;
-    animation: fade 0.5s;
-}
-
-@keyframes fade {
-    0% {
-        opacity: 0
-    }
-    100% {
-        opacity: 1
-    }
-}
-
 .important {
     color: #FF5700
 }
 
-.background {
-    position: fixed;
-    background: url("https://s2.ax1x.com/2019/05/22/V9oGgf.jpg") no-repeat;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
-    display: none;
-}
+
+
+.preview{padding-right: 30px;}
+
+
 
 .download-button{
     text-align: center;
     margin-left: 40px;
     border: 1px solid #cbcbd3;
-    padding: 10px 1em;
+    padding: 10px 20px;
     color: #666 ;
     border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 8px;
 }
 
-.download {
+.download-button:hover{
+    border: 1px solid #01afa6;
+
+}
+
+.online{
     display: none;
 }

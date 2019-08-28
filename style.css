@@ -30,16 +30,11 @@ header {
     color: #fdfdfd;
 }
 
-.avatar {
+main .left .avatar {
     text-align: center;
     margin-bottom: 5px;
 }
-@media screen and (max-width: 700px) {
-    .avatar  {
-      padding-left: 0; 
-    }
-}
-.avatar > img {
+main .left .avatar > img {
     width: 140px;
     height: 144px;
     border-radius: 50%;
