@@ -11,7 +11,7 @@
   box-sizing: border-box;
 }
 body {
-background: rgba(255, 192, 203, 0.5);
+background: rgba(255, 192, 203, 0.2);
 }
 .code-wrapper{
   height: 200px;
@@ -30,8 +30,8 @@ background: rgba(255, 192, 203, 0.5);
 }
 .actions{
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 4px;
+  top: 24px;
   display: flex;
   flex-direction: column;
 }
@@ -40,6 +40,7 @@ background: rgba(255, 192, 203, 0.5);
   background: rgb(250,230,90,0.8);
   padding: 8px 10px;
   border: none;
+  border-radius: 2px;
 }
 .actions>button.active{
   box-shadow: 1px 1px 1px rgba(250,230,90,0.8);
