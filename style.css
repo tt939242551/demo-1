@@ -32,7 +32,7 @@ header {
 
 .avatar {
     text-align: center;
-    padding-left: 16px;
+    margin-bottom: 5px;
 }
 @media screen and (max-width: 700px) {
     .avatar  {
@@ -105,9 +105,8 @@ main .left h3 {
 }
 
 main .left .line {
-    margin-left: 10px;
     flex: 1;
-    border-bottom: 1px solid #cbcbd3;
+    font-size: 14px;
 }
 .profile dl {
     display: flex;
@@ -163,20 +162,35 @@ main .left .line {
     font-size: 14px;
 }
 
-.type {
+.contact .content .type {
     display: flex;
     align-items: center;
     margin: 10px 0;
 }
 
- .type span {
+.contact .content .type span {
     margin-left: 10px;
     color: #666666;
 }
 
- .type svg {
+.contact .content .type svg {
     width: 20px;
     height: 20px;
+}
+.left .line .type {
+    display: flex;
+    align-items: center;
+    margin: 10px 0 10px 40px;
+}
+
+.left .line .type span {
+    margin-left: 9px;
+    color: #666666;
+}
+
+.left .line .type svg {
+    width: 22px;
+    height: 22px;
 }
 
 main .right {
@@ -189,6 +203,7 @@ main .right {
 @media screen and (max-width: 700px) {
     main .right {
         width: 100vw;
+        margin-left: 20px;
     }
 }
 
@@ -392,9 +407,12 @@ footer a {
     text-align: center;
     margin-left: 40px;
     border: 1px solid #cbcbd3;
-    padding: 10px 1em;
+    padding: 10px 20px;
     color: #666 ;
     border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 8px;
 }
 
 .download-button:hover{
