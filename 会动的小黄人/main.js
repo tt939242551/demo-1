@@ -1,5 +1,5 @@
 !function(){
-  var duration = 50
+  var duration = 30
   $('.actions').on('click', 'button', function(e){
     let $button = $(e.currentTarget) 
     let speed = $button.attr('data-speed')
