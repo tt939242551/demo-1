@@ -67,8 +67,8 @@ ul,li {
 .color>li.purple {
   background: purple;
 }
-.color>li.gray {
-  background: gray;
+.color>li.black {
+  background: black;
 }
 .sizes {
   position: fixed;

@@ -63,7 +63,7 @@ red.onclick = function(){
   yellow.classList.remove('active')
   pink.classList.remove('active')
   purple.classList.remove('active')
-  gray.classList.remove('active')
+  black.classList.remove('active')
 }
 green.onclick = function(){
   context.strokeStyle = 'green'
@@ -73,7 +73,7 @@ green.onclick = function(){
   yellow.classList.remove('active')
   pink.classList.remove('active')
   purple.classList.remove('active')
-  gray.classList.remove('active')
+  black.classList.remove('active')
 }
 blue.onclick = function(){
   context.strokeStyle = 'blue'
@@ -83,7 +83,7 @@ blue.onclick = function(){
   yellow.classList.remove('active')
   pink.classList.remove('active')
   purple.classList.remove('active')
-  gray.classList.remove('active')
+  black.classList.remove('active')
 }
 yellow.onclick = function(){
   context.strokeStyle = 'yellow'
@@ -93,7 +93,7 @@ yellow.onclick = function(){
   red.classList.remove('active')
   pink.classList.remove('active')
   purple.classList.remove('active')
-  gray.classList.remove('active')
+  black.classList.remove('active')
 }
 pink.onclick = function(){
   context.strokeStyle = 'pink'
@@ -103,7 +103,7 @@ pink.onclick = function(){
   yellow.classList.remove('active')
   red.classList.remove('active')
   purple.classList.remove('active')
-  gray.classList.remove('active')
+  black.classList.remove('active')
 }
 purple.onclick = function(){
   context.strokeStyle = 'purple'
@@ -113,11 +113,11 @@ purple.onclick = function(){
   yellow.classList.remove('active')
   pink.classList.remove('active')
   red.classList.remove('active')
-  gray.classList.remove('active')
+  black.classList.remove('active')
 }
-gray.onclick = function(){
-  context.strokeStyle = 'gray'
-  gray.classList.add('active')
+black.onclick = function(){
+  context.strokeStyle = 'black'
+  black.classList.add('active')
   green.classList.remove('active')
   blue.classList.remove('active')
   yellow.classList.remove('active')
