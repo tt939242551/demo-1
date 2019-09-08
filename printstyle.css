@@ -253,12 +253,7 @@ main .right .project {
 }
 
 
-
-
 .project  { margin-bottom: 1px} 
-
-
-
 
 .skillInfo .skill-content {
     margin: 4px 0 4px 20px;
@@ -281,7 +276,7 @@ main .right .project {
 }
 
 .aboutMe .aboutMe-content {
-    margin: 4px 0 0 20px;
+    margin: 4px 0 2px 20px;
     font-size: 14px;
     color: #666666;
     line-height: 18px;

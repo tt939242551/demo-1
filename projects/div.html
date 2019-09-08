@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://js.jirengu.com
+
+Copyright (c) 2019 by anonymous (http://js.jirengu.com/qusuzuzoyi/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+<style id="jsbin-css">
+#xxx{
+  border: 1px solid red;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 0;
+  top: 0
+}
+</style>
+</head>
+<body>
+<div id="xxx"></div>
+<script id="jsbin-javascript">
+let position = ['x','y']
+let canmove = false
+xxx.addEventListener('mousedown',(e)=>{
+  canmove = true
+  console.log(e)
+  position[0] = e.clientX
+  position[1] = e.clientY
+})
+document.addEventListener('mousemove',(e)=>{
+  if(canmove){
+ let detax = e.clientX -  position[0]
+ let detay = e.clientY -  position[1]
+ let x = parseInt(xxx.style.left || 0 )
+ let y = parseInt(xxx.style.top || 0 )
+ xxx.style.left = x + detax + 'px'
+ xxx.style.top = y + detay + 'px'
+ position[0] = e.clientX
+ position[1] = e.clientY
+ }
+})
+document.addEventListener('mouseup',()=>{
+  canmove = false
+})
+
+</script>
+</body>
+</html>
