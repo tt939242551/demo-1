@@ -34,6 +34,7 @@
       }
     }, duration)
   }
+  
   let code = `/*
   * 准备  开始
   /*
