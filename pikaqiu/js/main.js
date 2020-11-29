@@ -1,5 +1,5 @@
 !function(){
-  var duration = 50
+  var duration = 30
   $('.actions').on('click', 'button', function(e){
     let $button = $(e.currentTarget) // button
     let speed = $button.attr('data-speed')
@@ -7,10 +7,10 @@
       .siblings('.active').removeClass('active')
     switch(speed){
       case 'slow':
-        duration = 100
+        duration = 50
         break
       case 'normal':
-        duration = 50
+        duration = 30
         break
       case 'fast':
         duration = 10
@@ -127,7 +127,7 @@
   border: 2px solid black;
   position: absolute;
   top: 50px;
-  background: #FDE348;
+  background: #FEE433;
 }
 .upperLip.left{
   right: 50%;

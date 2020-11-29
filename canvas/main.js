@@ -13,6 +13,8 @@ if(document.body.ontouchstart !== undefined){
 }
 
 var eraserEnabled = false
+pen.classList.add('action')
+eraser.classList.remove('action')
 pen.onclick = function(){
   eraserEnabled = false
   pen.classList.add('action')

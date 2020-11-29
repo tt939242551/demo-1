@@ -14,13 +14,12 @@ body{
   height: 100vh;
 }
 .code-wrapper{
-  flex:1;
-  height: 50%;
+  height: 35%;
   padding: 10px;
 }
 .preview-wrapper{
   flex: 1;
-  height: 50%;
+  height: 40%;
 }
 #code{
   overflow: hidden;
