@@ -4,22 +4,21 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-    <!-- <title>情人节快乐</title> -->
+    <title>情人节快乐</title>
     <link rel="stylesheet" href="./css/style.css" />
     <script src="./js/jsized.snow.min.js"></script>
     <style>
       .title {
         position: absolute;
-        bottom: 50px;
-        left: 50%;
-        transform: translateX(-50%);
+        bottom: 4%;
+        width: 100%;
         animation: blink 1s infinite steps(1);
         text-align: center;
         padding: 24px;
         margin: 0;
         font-family: helvetica, arial, sans-serif;
         color: #d1d1d1;
-        font-size: 80px;
+        font-size: 40px;
         font-weight: bold;
         text-shadow: 0 0 0.2em #f87, -0 -0 0.2em #f87;
       }
@@ -29,7 +28,7 @@
         }
       }
       #text {
-        width: 500px;
+        width: 100%;
         left: 50%;
         transform: translateX(-50%);
         padding: 24px;
@@ -40,7 +39,7 @@
         font-weight: bold;
         text-shadow: 0 0 0.2em #ffe1b8, -0 -0 0.2em #ffe1b8;
         position: absolute;
-        top: 50px;
+        top: 2%;
         text-align: center;
       }
       #days {
@@ -50,12 +49,13 @@
         font-weight: bold;
         text-shadow: 0 0 0.2em#E9686B, -0 -0 0.2em #e9686b;
         position: absolute;
-        top: 50px;
         text-align: center;
         position: absolute;
-        top: 400px;
+        top: 70%;
         width: 100%;
         text-align: center;
+        padding: 0 20%;
+        box-sizing: border-box;
       }
     </style>
   </head>
@@ -65,49 +65,49 @@
     <audio src="./music/gai.mp3" controls autoplay="autoplay" id="audio"></audio>
     <div id="text"></div>
 
-    <div id="drag-container" style="transform: rotateX(-10deg) rotateY(0deg);">
+    <div id="drag-container" style="transform: rotateX(-10deg) rotateY(0deg);width: 3000px;">
       <div
         id="spin-container"
         style="width: 120px; height: 170px; animation: 60s linear 0s infinite normal none running spinRevert;"
       >
         <img
-          src="./images/image_1.png"
+          src="./images/image_1.jpg"
           alt=""
           style="transform: rotateY(0deg) translateZ(240px); transition: transform 1s ease 2s;"
         />
         <img
-          src="./images/image_2.png"
+          src="./images/image_2.jpg"
           alt=""
           style="transform: rotateY(45deg) translateZ(240px); transition: transform 1s ease 1.75s;"
         />
         <img
-          src="./images/image_3.png"
+          src="./images/image_3.jpg"
           alt=""
           style="transform: rotateY(90deg) translateZ(240px); transition: transform 1s ease 1.5s;"
         />
         <img
-          src="./images/image_4.png"
+          src="./images/image_4.jpg"
           alt=""
           style="transform: rotateY(135deg) translateZ(240px); transition: transform 1s ease 1.25s;"
         />
         <img
-          src="./images/image_5.png"
+          src="./images/image_5.jpg"
           alt=""
           style="transform: rotateY(180deg) translateZ(240px); transition: transform 1s ease 1s;"
         />
         <img
-          src="./images/image_6.png"
+          src="./images/image_6.jpg"
           alt=""
           style="transform: rotateY(225deg) translateZ(240px); transition: transform 1s ease 0.75s;"
         />
 
         <img
-          src="./images/image_7.png"
+          src="./images/image_7.jpg"
           alt=""
           style="transform: rotateY(270deg) translateZ(240px); transition: transform 1s ease 0.5s;"
         />
         <img
-          src="./images/image_8.png"
+          src="./images/image_8.jpg"
           alt=""
           style="transform: rotateY(315deg) translateZ(240px); transition: transform 1s ease 0.25s;"
         />
@@ -117,7 +117,7 @@
       <div id="ground" style="width: 720px; height: 720px;"></div>
     </div>
 
-   <!--  <div class="title">2020情人节快乐呀</div> -->
+    <div class="title">小竹子，2021情人节快乐呀！</div> 
     <div id="days"></div>
 
     <div
@@ -130,8 +130,8 @@
       let i = 0,
         timer = 0;
 
-      str = ""
-      //  "我的爱只能够<br>让你一个人独自拥有<br>我的灵和魂魄<br>不停守候在你心门口<br>我的伤和眼泪<br>化为乌有为你而流<br>藏在无边无际<br>小小宇宙<br>爱你的我";
+      str = 
+        "我的爱只能够<br>让你一个人独自拥有<br>我的灵和魂魄<br>不停守候在你心门口<br>我的伤和眼泪<br>化为乌有为你而流<br>藏在无边无际<br>小小宇宙<br>爱你的我";
 
       function typing() {
         if (i <= str.length) {
@@ -147,8 +147,8 @@
     </script>
     <script>
       createSnow("", 60);
-      let diff = getDiffDate("2017-12-2");
-      let content = ``;
+      let diff = getDiffDate("2017-6-9");
+      let content = `从2017年6月9日到现在已经${diff}天了，希望在未来的每一天里我们都能快快乐乐，让每一天都像情人节一样`;
       let days = document.getElementById("days");
       days.innerHTML = content;
 
