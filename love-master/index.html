@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<!-- saved from url=(0064)https://www.17sucai.com/preview/1750622/2019-07-11/xz/index.html -->
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- <title>情人节快乐</title> -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/jsized.snow.min.js"></script>
+    <style>
+      .title {
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: blink 1s infinite steps(1);
+        text-align: center;
+        padding: 24px;
+        margin: 0;
+        font-family: helvetica, arial, sans-serif;
+        color: #d1d1d1;
+        font-size: 80px;
+        font-weight: bold;
+        text-shadow: 0 0 0.2em #f87, -0 -0 0.2em #f87;
+      }
+      @keyframes blink {
+        50% {
+          color: transparent;
+        }
+      }
+      #text {
+        width: 500px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 24px;
+        margin: 0;
+        font-size: 24px;
+        font-family: helvetica, arial, sans-serif;
+        color: #d1d1d1;
+        font-weight: bold;
+        text-shadow: 0 0 0.2em #ffe1b8, -0 -0 0.2em #ffe1b8;
+        position: absolute;
+        top: 50px;
+        text-align: center;
+      }
+      #days {
+        font-size: 24px;
+        font-family: helvetica, arial, sans-serif;
+        color: #d1d1d1;
+        font-weight: bold;
+        text-shadow: 0 0 0.2em#E9686B, -0 -0 0.2em #e9686b;
+        position: absolute;
+        top: 50px;
+        text-align: center;
+        position: absolute;
+        top: 400px;
+        width: 100%;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <audio src="./music/gai.mp3" controls autoplay="autoplay" id="audio"></audio>
+    <div id="text"></div>
+
+    <div id="drag-container" style="transform: rotateX(-10deg) rotateY(0deg);">
+      <div
+        id="spin-container"
+        style="width: 120px; height: 170px; animation: 60s linear 0s infinite normal none running spinRevert;"
+      >
+        <img
+          src="./images/image_1.png"
+          alt=""
+          style="transform: rotateY(0deg) translateZ(240px); transition: transform 1s ease 2s;"
+        />
+        <img
+          src="./images/image_2.png"
+          alt=""
+          style="transform: rotateY(45deg) translateZ(240px); transition: transform 1s ease 1.75s;"
+        />
+        <img
+          src="./images/image_3.png"
+          alt=""
+          style="transform: rotateY(90deg) translateZ(240px); transition: transform 1s ease 1.5s;"
+        />
+        <img
+          src="./images/image_4.png"
+          alt=""
+          style="transform: rotateY(135deg) translateZ(240px); transition: transform 1s ease 1.25s;"
+        />
+        <img
+          src="./images/image_5.png"
+          alt=""
+          style="transform: rotateY(180deg) translateZ(240px); transition: transform 1s ease 1s;"
+        />
+        <img
+          src="./images/image_6.png"
+          alt=""
+          style="transform: rotateY(225deg) translateZ(240px); transition: transform 1s ease 0.75s;"
+        />
+
+        <img
+          src="./images/image_7.png"
+          alt=""
+          style="transform: rotateY(270deg) translateZ(240px); transition: transform 1s ease 0.5s;"
+        />
+        <img
+          src="./images/image_8.png"
+          alt=""
+          style="transform: rotateY(315deg) translateZ(240px); transition: transform 1s ease 0.25s;"
+        />
+
+        <p>LOVE Mr.J</p>
+      </div>
+      <div id="ground" style="width: 720px; height: 720px;"></div>
+    </div>
+
+   <!--  <div class="title">2020情人节快乐呀</div> -->
+    <div id="days"></div>
+
+    <div
+      id="color-picker-wrap"
+      style="display: none; position: fixed; top: 0px; left: 0px; z-index: 9999;"
+    ></div>
+    <div id="download_plus_animation"></div>
+    <script>
+      let divTyping = document.getElementById("text");
+      let i = 0,
+        timer = 0;
+
+      str = ""
+      //  "我的爱只能够<br>让你一个人独自拥有<br>我的灵和魂魄<br>不停守候在你心门口<br>我的伤和眼泪<br>化为乌有为你而流<br>藏在无边无际<br>小小宇宙<br>爱你的我";
+
+      function typing() {
+        if (i <= str.length) {
+          divTyping.innerHTML = str.slice(0, i++) + "_";
+          timer = setTimeout(typing, 300);
+        } else {
+          divTyping.innerHTML = str; //结束打字,移除 _ 光标
+          clearTimeout(timer);
+        }
+      }
+
+      typing();
+    </script>
+    <script>
+      createSnow("", 60);
+      let diff = getDiffDate("2017-12-2");
+      let content = ``;
+      let days = document.getElementById("days");
+      days.innerHTML = content;
+
+
+      var myAuto = document.getElementById('audio');
+      myAuto.play();
+      myAuto.focus();
+
+      function getDiffDate(targetDate) {
+        let date1 = new Date(targetDate);
+        let date2 = new Date();
+        date1 = new Date(
+          date1.getFullYear(),/*  */
+          date1.getMonth(),
+          date1.getDate()
+        );
+        date2 = new Date(
+          date2.getFullYear(),
+          date2.getMonth(),
+          date2.getDate()
+        );
+        const diff = date2.getTime() - date1.getTime();
+        const diffDate = diff / (24 * 60 * 60 * 1000);
+        return diffDate;
+      }
+    </script>
+  </body>
+</html>
