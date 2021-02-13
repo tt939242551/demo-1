@@ -10,7 +10,7 @@
     <style>
       .title {
         position: absolute;
-        bottom: 4%;
+        bottom: 2%;
         width: 100%;
         animation: blink 1s infinite steps(1);
         text-align: center;
@@ -50,7 +50,7 @@
         position: absolute;
         text-align: center;
         position: absolute;
-        top: 85%;
+        bottom: 10%;
         width: 100%;
         text-align: center;
         padding: 0 10%;
@@ -61,57 +61,57 @@
 
   <body>
 
-    <audio src="./music/gai.mp3" controls autoplay="autoplay" id="audio"></audio>
+    <audio src="./music/gai.mp3"  autoplay="autoplay" id="audio"></audio>
     <div id="text"></div>
 
     <div id="drag-container" style="transform: rotateX(-20deg) rotateY(0deg);width: 3000px;">
       <div
         id="spin-container"
-        style="width: 160px; height: 240px; animation: 60s linear 0s infinite normal none running spinRevert;"
+        style="width: 200px; height: 300px; animation: 60s linear 0s infinite normal none running spinRevert;"
       >
         <img
           src="./images/image_1.jpg"
           alt=""
-          style="transform: rotateY(0deg) translateZ(240px); transition: transform 1s ease 2s;"
+          style="transform: rotateY(0deg) translateZ(300px); transition: transform 1s ease 2s;"
         />
         <img
           src="./images/image_2.jpg"
           alt=""
-          style="transform: rotateY(45deg) translateZ(240px); transition: transform 1s ease 1.75s;"
+          style="transform: rotateY(45deg) translateZ(300px); transition: transform 1s ease 1.75s;"
         />
         <img
           src="./images/image_3.jpg"
           alt=""
-          style="transform: rotateY(90deg) translateZ(240px); transition: transform 1s ease 1.5s;"
+          style="transform: rotateY(90deg) translateZ(300px); transition: transform 1s ease 1.5s;"
         />
         <img
           src="./images/image_4.jpg"
           alt=""
-          style="transform: rotateY(135deg) translateZ(240px); transition: transform 1s ease 1.25s;"
+          style="transform: rotateY(135deg) translateZ(300px); transition: transform 1s ease 1.25s;"
         />
         <img
           src="./images/image_5.jpg"
           alt=""
-          style="transform: rotateY(180deg) translateZ(240px); transition: transform 1s ease 1s;"
+          style="transform: rotateY(180deg) translateZ(300px); transition: transform 1s ease 1s;"
         />
         <img
           src="./images/image_6.jpg"
           alt=""
-          style="transform: rotateY(225deg) translateZ(240px); transition: transform 1s ease 0.75s;"
+          style="transform: rotateY(225deg) translateZ(300px); transition: transform 1s ease 0.75s;"
         />
 
         <img
           src="./images/image_7.jpg"
           alt=""
-          style="transform: rotateY(270deg) translateZ(240px); transition: transform 1s ease 0.5s;"
+          style="transform: rotateY(270deg) translateZ(300px); transition: transform 1s ease 0.5s;"
         />
         <img
           src="./images/image_8.jpg"
           alt=""
-          style="transform: rotateY(315deg) translateZ(240px); transition: transform 1s ease 0.25s;"
+          style="transform: rotateY(315deg) translateZ(300px); transition: transform 1s ease 0.25s;"
         />
 
-        <p>LOVE Mr.J</p>
+        <p>LOVE Fang</p>
       </div>
       <div id="ground" style="width: 720px; height: 720px;"></div>
     </div>
@@ -147,14 +147,19 @@
     <script>
       createSnow("", 60);
       let diff = getDiffDate("2017-6-9");
-      let content = `从2017年6月9日到现在已经${diff}天了，希望在未来的每一天里我们都能快快乐乐，让每一天都像情人节一样`;
+      let content = `从2017年6月9日到现在已经认识你${diff}天了，希望在未来的每一天里我们都能快快乐乐，让每一天都像情人节一样`;
       let days = document.getElementById("days");
       days.innerHTML = content;
 
 
       var myAuto = document.getElementById('audio');
+      setTimeout(() => {
+        myAuto.pause()
+        myAuto.load()
+        myAuto.play();
+      }, 10)
       myAuto.play();
-      myAuto.focus();
+     
 
       function getDiffDate(targetDate) {
         let date1 = new Date(targetDate);
