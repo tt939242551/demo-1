@@ -1,5 +1,5 @@
 !function(){
-  var duration = 30
+  var duration = 10
   $('.actions').on('click', 'button', function(e){
     let $button = $(e.currentTarget) 
     let speed = $button.attr('data-speed')
@@ -342,7 +342,7 @@
 
 
   /*
-  * 好了，这个小黄人送给你
+  * 好了，这个小黄人送给范范童鞋，祝圣诞节快乐!
   */
 `
   writeCode('',code)
