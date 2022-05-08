@@ -72,12 +72,9 @@ body :-ms-input-placeholder {
 }
 
 .container h1 {
-    font-size: 40px;
-    -webkit-transition-duration: 1s;
-    transition-duration: 1s;
-    -webkit-transition-timing-function: ease-in-put;
-    transition-timing-function: ease-in-put;
-    font-weight: 200;
+    font-size: 28px;
+    font-weight: 100;
+    padding: 0 20px;
 }
 
 form {
