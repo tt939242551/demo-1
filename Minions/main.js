@@ -1,5 +1,5 @@
 !function(){
-  var duration = 10
+  var duration = 8
   $('.actions').on('click', 'button', function(e){
     let $button = $(e.currentTarget) 
     let speed = $button.attr('data-speed')
@@ -7,13 +7,13 @@
       .siblings('.active').removeClass('active')
     switch(speed){
       case 'slow':
-        duration = 30
+        duration = 20
         break
       case 'normal':
-        duration = 10
+        duration = 8
         break
       case 'fast':
-        duration = 5
+        duration = 4
         break
     }
   })
@@ -342,7 +342,8 @@
 
 
   /*
-  * 好了，这个小黄人送给明月同学，祝生日快乐, 天天开心! (*^_^*)
+  * 好了，这个小黄人送给明月同学，
+    祝生日快乐, 天天开心! (*^_^*)
   */
 `
   writeCode('',code)
