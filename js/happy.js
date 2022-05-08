@@ -1,4 +1,4 @@
-$(function () {
+
     setTimeout(function () {
         $('.name').animate({
             opacity: "1",
@@ -25,5 +25,14 @@ $(function () {
     }, 9000);
     $(window).click(function () {
         $('audio')[0].play();
+        window._isPlay = new Date()-0
     });
-})
+    $(`.bt1`).click(function () {
+        if (new Date()-window._isPlay>60*1000) {
+            location.href = "./Minions/Minions.html"; 
+            return
+        }
+        if (window._isPlay) {
+            alert(`先听完音乐哟!`) 
+        }
+    });
