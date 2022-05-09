@@ -2,11 +2,6 @@ window._index=0
 $('#login-button').click(function (event) {
     let userName = document.getElementById("userName").value;
     let pwd = document.getElementById("pwd").value;
-    if (new Date()-new Date(`2022-05-10`)<0) {
-        $('#hs').text("还没到生日那天哟!想偷看,不可能的,哈哈!");
-        event.preventDefault();
-        return
-    }
     if (userName == "明月" && pwd == "生日快乐") {    
         $('#hs').text(""); 
         if (window._index<=5) { $('#h').text(`真聪明!${window._index}次就猜对了,棒棒哒!`); }
