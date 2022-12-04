@@ -2,7 +2,7 @@ window._index=0
 $('#login-button').click(function (event) {
     let userName = document.getElementById("userName").value;
     let pwd = document.getElementById("pwd").value;
-    if (userName == "明月" && pwd == "生日快乐") {    
+    if (userName == "苏苏" && pwd == "生日快乐") {    
         $('#hs').text(""); 
         if (window._index<=5) { $('#h').text(`真聪明!${window._index}次就猜对了,棒棒哒!`); }
         if (window._index>5){ $('#h').text(`厉害哟!恭喜你猜对了,棒棒哒!`); }
@@ -16,7 +16,7 @@ $('#login-button').click(function (event) {
         }, 4000);
     } else {
         window._index++
-        if (userName == "明月") {
+        if (userName == "苏苏") {
             $('#hs').text("密码错误哟!"); 
             if (window._index>=5) { $('#h').text("密码也是中文哟!"); }
             if (window._index>=10) { $('#h').text("加油,马上就可以猜对了!"); }
