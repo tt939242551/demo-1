@@ -418,3 +418,6 @@ footer a {
 .online{
     display: none;
 }
+.aboutMe-content b{
+    color: #2c3232;
+}
